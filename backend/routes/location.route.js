@@ -1,17 +1,15 @@
+
 const { getLocations } = require("../controllers/location.controller.js");
 
-
-const locationRoute = (req, res) => {
-
+const locationRoutes = (req, res) => {
     const url = new URL(req.url, 'http://localhost:5000');
     const pathname = url.pathname;
 
-
-    if(req.method === "GET" && pathname === "api/getLocations") {
+    if (req.method === "GET" && pathname === "/api/locations") {
         return getLocations(req, res);
-
     }
-   
-}
 
-module.exports = locationRoute;
+    return false; 
+};
+
+module.exports = locationRoutes;
