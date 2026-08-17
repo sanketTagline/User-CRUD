@@ -1,30 +1,29 @@
 const API_URL = "http://localhost:5000/api";
 
 window.onload = function () {
-    fetchLocations();
+    // fetchLocations();
     fetchUsers();
 };
 // locations :- 
 
 
-let locations ={};
+// let locations ={};
 
-async function fetchLocations() {
-    try {
-        const response = await fetch("http://localhost:5000/api/locations");
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        locations = await response.json();
-        console.log("Fetched locations:", locations);
-    } catch (error) {
-        console.error("Error fetching locations:", error);
-    }
-}
+
+// async function fetchLocations() {
+//     try {
+//         let response = await fetch(API_URL + "/locations");
+//         locationData = await response.json();
+//         populateCountries();
+//     } catch (error) {
+//         console.error("Error fetching locations:", error);
+//     }
+// }
 
 
 // Users APIS Integragation :- 
 
+// 1. GetAllUsers API Integration :- 
 
 async function fetchUsers() {
     try {
