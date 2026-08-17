@@ -129,6 +129,27 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+
+    
+
+    let fileName = pathname === "/" ? "index.html" : pathname;
+    let filePath = path.join(__dirname, "../frontend", fileName);
+
+    fs.readFile(filePath, (err, data) => {
+        if (err) {
+            res.writeHead(404, { "Content-Type": "text/plain" });
+            return res.end("Page Not Found");
+        }
+
+        // Set Content-Type based on file extension
+        let contentType = "text/html";
+        if (fileName.endsWith(".css")) contentType = "text/css";
+        if (fileName.endsWith(".js")) contentType = "text/javascript";
+
+        res.writeHead(200, { "Content-Type": contentType });
+        res.end(data);
+    });
+
     
     
 });
