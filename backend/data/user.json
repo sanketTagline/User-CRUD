@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Sanket Patel111",
+    "email": "sanket@gmail.com",
+    "phoneNumber": "9876543210",
+    "gender": "Female",
+    "hobbies": [
+      "Cricket",
+      "Reading"
+    ],
+    "country": "India",
+    "state": "Gujarat",
+    "district": "Surat",
+    "pincode":398774
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "email": "priya@gmail.com",
+    "phoneNumber": "8877551100",
+    "gender": "Female",
+    "hobbies": [
+      "Music",
+      "Gaming"
+    ],
+    "country": "India",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "pincode":387445
+
+  }
+]
